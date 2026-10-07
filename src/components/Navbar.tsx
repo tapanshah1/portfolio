@@ -123,7 +123,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden mt-3 max-w-6xl mx-auto glass-panel rounded-2xl p-6 border-white/10 shadow-2xl"
+            className="md:hidden mt-3 max-w-6xl mx-auto bg-[#0d0e18]/95 backdrop-blur-2xl rounded-2xl p-6 border border-white/15 shadow-2xl shadow-black/80 z-50"
           >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => {
@@ -133,7 +133,7 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-gray-200 hover:bg-white/10 transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-gray-100 hover:bg-white/10 hover:text-white transition-colors"
                   >
                     <Icon size={18} className="text-blue-400" />
                     <span>{link.name}</span>
@@ -144,7 +144,7 @@ export default function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full py-3 text-center text-sm font-semibold rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-600/30"
+                  className="w-full py-3 text-center text-sm font-semibold rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-600/30"
                 >
                   Get in Touch
                 </a>

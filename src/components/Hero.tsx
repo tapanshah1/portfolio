@@ -14,7 +14,7 @@ import { PERSONAL_INFO } from "@/data/portfolioData";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen pt-44 sm:pt-36 lg:pt-40 pb-20 flex items-center justify-center overflow-hidden">
       {/* Background Ambient Glows */}
       <div className="ambient-glow-1" />
       <div className="ambient-glow-2" />
@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-6">
         {/* Top Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-6"
         >
-          <div className="glass-pill px-4 py-1.5 rounded-full flex items-center gap-2 border border-blue-500/30 text-blue-300 text-xs font-semibold uppercase tracking-wider shadow-lg shadow-blue-500/10">
+          <div className="glass-pill px-3.5 py-1.5 rounded-full flex items-center gap-2 border border-blue-500/30 text-blue-300 text-[11px] sm:text-xs font-semibold uppercase tracking-wider shadow-lg shadow-blue-500/10">
             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
             iOS Team Lead & iOS MDM Specialist
           </div>
@@ -43,12 +43,12 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
-            Crafting High-Performance <br />
-            <span className="gradient-text-blue">iOS Apps & MDM Solutions</span>
+          <h1 className="text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight sm:leading-tight">
+            Crafting High-Performance <br className="hidden sm:inline" />
+            <span className="gradient-text-blue block sm:inline mt-1 sm:mt-0">iOS Apps & MDM Solutions</span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-gray-300 font-normal leading-relaxed max-w-3xl mx-auto">
+          <p className="mt-6 text-sm sm:text-lg lg:text-xl text-gray-200 font-normal leading-relaxed max-w-3xl mx-auto">
             {PERSONAL_INFO.bio}
           </p>
         </motion.div>
